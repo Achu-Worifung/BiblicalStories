@@ -2,9 +2,8 @@
 import Head from 'next/head';
 import DisplayStory from './DisplayStory';
 import Recomendation from './Recomendation';
-import {fetchStories} from './storyWebScrap';
-import path from 'path';
-import fs from 'fs';
+import Error from 'next/error';
+;
 
 // import {stories} from '/stories.json';
 interface Story {
@@ -46,6 +45,9 @@ export default async function Page({ params }:Story) {
   
 
   const viewingStory: Story = stories.find((story) =>  story.title == title);
+  // if(!viewingStory) return <Error statusCode={404}/>;
+  // console.log('Viewing Story is second:', viewingStory);
+  
   // let theverses = await fetchStories(viewingStory.reference, 'KJV');
   // console.log('theverses:',theverses);
   
@@ -71,17 +73,15 @@ export default async function Page({ params }:Story) {
   
 
   return (
-    <>
-      <Head>
-        <title>hello</title>
-      </Head>
+    <div>
+   
       <DisplayStory  story = {{title: viewingStory?.title, reference: viewingStory?.reference, image: viewingStory?.image}}/>
 
-      {/* <Recomendation stories = {similarStories(stories, viewingStory)} /> */}
+      <Recomendation viewingStory={viewingStory} Stories={stories} />
       
     
       
-    </>
+    </div>
   );
 }
 async function getStories() {

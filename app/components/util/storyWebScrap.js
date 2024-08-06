@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 export async function fetchStories(verse, translation) {
     try 
     {
-        console.log('fetching stories');
+        // console.log('fetching stories');
         
         let url = `https://www.biblegateway.com/passage/?search=${verse}&version=${translation}`;
         const res = await axios.get(url);

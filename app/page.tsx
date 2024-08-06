@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import Navbar from "./Navbar";
+import Navbar from "@homepage/Navbar";
 import MainContent from "./MainContent";
 import { useState, useEffect } from "react";
 
@@ -44,9 +44,9 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div>
       <Navbar />
       <MainContent stories={stories} />
-    </>
+    </div>
   );
 }

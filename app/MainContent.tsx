@@ -1,6 +1,6 @@
 import React from "react";
 // import style from "./MainContent.module.css";
-import ReadButton from "./ReadButton";
+import ReadButton from "@homepage/ReadButton";
 
 interface Story {
   title: string;

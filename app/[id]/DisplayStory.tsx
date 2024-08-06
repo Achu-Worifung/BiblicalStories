@@ -1,6 +1,8 @@
 import React from "react";
-import { fetchStories } from "./storyWebScrap";
+// import { fetchStories } from "../components/utitl/storyWebScrap";
+import { fetchStories } from "@util/storyWebScrap";
 import ChangeVersion from "./ChangeVersion";
+import {getRecommendation} from '@util/getRecomendation';
 
 interface StoryObject {
   title: string;
@@ -44,7 +46,7 @@ export default async function DisplayStory({ story }: StoryObject) {
         />
 
         <div className="py-2 md:px-2 sm:px-2">
-        <div className="py-2 md:px-2 sm:px-2 text-start" dangerouslySetInnerHTML={{ __html: TheStory }} />
+        <div className="py-2 md:px-2 sm:px-2 text-start px-2" dangerouslySetInnerHTML={{ __html: TheStory }} />
         </div>
       </div>
     </div>

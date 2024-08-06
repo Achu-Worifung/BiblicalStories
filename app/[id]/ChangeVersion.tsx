@@ -6,7 +6,7 @@ export default function ChangeVersion({version})
     console.log('version:',typeof version);
     
     const handleVersionChange = (event) => {
-        console.log('event.target.value:',event.target.value);
+        // console.log('event.target.value:',event.target.value);
         localStorage.setItem('version', event.target.value);
         window.location.reload();
     };
