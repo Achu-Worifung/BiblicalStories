@@ -33,9 +33,9 @@ const formatURL = (title) =>
 
 export default function MainContent({ stories }: MainContentProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-4 mt-1">
+    <div className="flex flex-wrap justify-center gap-4 mt-1  bg-base-100  ">
       {stories.map((story: Story, i:number) => (
-        <div className="card bg-base-100 w-80 shadow-xl">
+        <div key = {i} className="card bg-base-300 w-80 shadow-xl max-w-[428px]">
           <figure>
             <img
               src={story.image}
@@ -43,9 +43,9 @@ export default function MainContent({ stories }: MainContentProps) {
               className={imageClassName({ fit: story.fit, position: story.position })}
             />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">{story.title}</h2>
-            <p>{story.content}</p>
+          <div className="card-body ">
+            <h2 className="card-title ">{story.title}</h2>
+            <p className="text-ellipsis">{story.content}</p>
             <div className="card-actions justify-end">
               <ReadButton name={formatURL(story.title)}/>
             </div>

@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Navbar from "@homepage/Navbar";
-import MainContent from "./MainContent";
+import MainContent from "@homepage/MainContent";
 import { useState, useEffect } from "react";
 
 interface Story {
