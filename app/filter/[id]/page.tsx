@@ -14,12 +14,13 @@ export default async function filter({ params }) {
     console.log("filteredStories:", filteredStories);
 
   return (
-    <div className="w-full  bg-base-200 h-screen">
+    <div className="w-full  bg-base-200 ">
       <Navbar />
-      <div className="hero  self-center" style={{height:'calc(95vh - 48px)'}}>
+      <div className="hero  self-center" >
         <MainContent stories={filteredStories} />
       </div>
 
+      <Footer />
     </div>
   );
 }
