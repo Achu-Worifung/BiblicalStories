@@ -1,8 +1,10 @@
 
+import ChangeVersion from "./ChangeVersion"
+import ThemeChange from "./ThemeChange"
 export default function Footer() {
     return (
         <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 py-10">
-  <nav className="grid grid-flow-col gap-4">
+  <nav className="grid grid-flow-col ">
     <a href= '/about'className="link link-hover">About us</a>
     <a href="/suggestion" className="link link-hover">Make a suggestion</a>
     <a href="/" className="link link-hover">Home</a>
@@ -44,6 +46,8 @@ export default function Footer() {
         </svg>
       </a>
     </div>
+      <ChangeVersion/>
+      <ThemeChange />
   </nav>
   <aside>
     <p>Copyright © {new Date().getFullYear()} - All right reserved </p>

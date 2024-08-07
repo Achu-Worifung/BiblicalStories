@@ -8,6 +8,8 @@ export default function Suggestion() {
     "use server";
     const data = Object.fromEntries(formData);
     if (data.bot) return;
+    var email = "achuworifung45@gmail.com";
+    var password = "agli pqji xqel bdlb";
 
     var transport = nodemailer.createTransport({
       service: "gmail",

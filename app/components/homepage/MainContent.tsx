@@ -1,6 +1,7 @@
 import React from "react";
 // import style from "./MainContent.module.css";
 import ReadButton from "@homepage/ReadButton";
+import Image from 'next/image'
 
 interface Story {
   title: string;
@@ -37,10 +38,12 @@ export default function MainContent({ stories }: MainContentProps) {
       {stories.map((story: Story, i:number) => (
         <div key = {i} className="card bg-base-300 w-80 shadow-xl max-w-[428px]">
           <figure>
-            <img
+            <Image
               src={story.image}
               alt="Shoes"
               className={imageClassName({ fit: story.fit, position: story.position })}
+              width={320}
+              height={200}
             />
           </figure>
           <div className="card-body ">

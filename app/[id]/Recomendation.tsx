@@ -1,7 +1,9 @@
+'use client'
 import React from "react";
 import getRecommendation from "@util/getRecomendation";
 import ReadButton from "@homepage/ReadButton";
 import  formatURL  from "@util/formatURL";
+import Image from "next/image";
 
 
 export default async function Recomendation({ viewingStory, Stories }) {
@@ -20,10 +22,12 @@ export default async function Recomendation({ viewingStory, Stories }) {
       {recomendation.map((story, i) => (
         <div key={i} className="card bg-base-100 image-full w-96 shadow-xl inline-block m-3 min-w-[17rem] ">
           <figure>
-            <img
+            <Image
               src={story.image}
               alt={story.title}
               className={`object-${story.fit} object-${story.position}  !min-w-80`}
+              width={320}
+              height={500}
             />
           </figure>
           <div className="card-body">

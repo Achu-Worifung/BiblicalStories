@@ -1,3 +1,4 @@
+'use server'
 const axios = require('axios');
 const cheerio = require('cheerio');
 export async function fetchStories(verse, translation) {
