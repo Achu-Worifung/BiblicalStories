@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default function Navbar() {
   const categoriesArray = [
-    'Home',
     "Divine Intervention",
     "Old Testament",
     "New Testament",

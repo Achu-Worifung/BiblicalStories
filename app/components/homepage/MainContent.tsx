@@ -33,7 +33,7 @@ const formatURL = (title) =>
 
 export default function MainContent({ stories }: MainContentProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-4 mt-1  bg-base-100  ">
+    <div className="flex flex-wrap justify-center gap-4   bg-base-100 py-10 ">
       {stories.map((story: Story, i:number) => (
         <div key = {i} className="card bg-base-300 w-80 shadow-xl max-w-[428px]">
           <figure>

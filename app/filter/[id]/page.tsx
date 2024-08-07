@@ -1,6 +1,7 @@
 import getRecommendation from "@util/getRecomendation";
 import MainContent from "@homepage/MainContent";
 import Navbar from "@homepage/Navbar";
+import Footer from "@homepage/Footer";
 export default async function filter({ params }) {
   const category = decode(params.id);
   const Stories = await getStories();
@@ -18,6 +19,7 @@ export default async function filter({ params }) {
       <div className="hero  self-center" style={{height:'calc(95vh - 48px)'}}>
         <MainContent stories={filteredStories} />
       </div>
+
     </div>
   );
 }
