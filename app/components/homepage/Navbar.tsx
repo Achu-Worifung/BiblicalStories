@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Navbar() {
   const categoriesArray = [
-    "Divine Intervention",
     "Old Testament",
     "New Testament",
+    "Divine Intervention",
     "Forgiveness",
     "Judgement",
     "Covenant",

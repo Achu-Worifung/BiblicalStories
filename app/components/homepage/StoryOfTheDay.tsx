@@ -55,14 +55,14 @@ export default function StoryOfTheDay({ stories }) {
   const url = sotd? formatURL(sotd?.title):'';
 
   return (
-    <div className="hero bg-base-300 w-[auto] pt-4">
+    <div className="hero bg-base-300 w-[auto] pt-4 max-h-lvh">
       <div className="hero-content flex-col lg:flex-row">
         <Image
          src={sotd?.image}
          alt={sotd?.title}
-         width={586}
-         height={414}
-          className="max-w-sm rounded-lg shadow-2xl"
+         width={320}
+         height={200}
+          className="max-w-sm rounded-lg shadow-2xl max-h-80 "
         />
         <div>
           <h1 className="text-5xl font-bold">Story of the Day</h1>

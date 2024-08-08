@@ -2,6 +2,7 @@ import getRecommendation from "@util/getRecomendation";
 import MainContent from "@homepage/MainContent";
 import Navbar from "@homepage/Navbar";
 import Footer from "@homepage/Footer";
+import { notFound } from 'next/navigation';
 export default async function filter({ params }) {
   const category = decode(params.id);
   const Stories = await getStories();
@@ -9,6 +10,9 @@ export default async function filter({ params }) {
   const res = await getRecommendation(Stories, {
     metadata: { categories: [category] },
   });
+ 
+  
+  if (res.length === 0) return notFound();
   const filteredStories = res.map((story) => story.story);
 
     // console.log("filteredStories:", filteredStories);
