@@ -11,7 +11,7 @@ export default async function filter({ params }) {
   });
   const filteredStories = res.map((story) => story.story);
 
-    console.log("filteredStories:", filteredStories);
+    // console.log("filteredStories:", filteredStories);
 
   return (
     <div className="w-full  bg-base-200 ">

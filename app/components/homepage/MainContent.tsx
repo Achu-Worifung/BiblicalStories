@@ -47,8 +47,9 @@ export default function MainContent({ stories }: MainContentProps) {
             />
           </figure>
           <div className="card-body ">
+          
             <h2 className="card-title ">{story.title}</h2>
-            <p className="text-ellipsis">{story.content}</p>
+            <p className="text-ellipsis ">{story.content}</p>
             <div className="card-actions justify-end">
               <ReadButton name={formatURL(story.title)}/>
             </div>

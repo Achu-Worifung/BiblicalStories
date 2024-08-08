@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { fetchStories } from "@util/storyWebScrap";
 
+
 interface StoryObject {
   title: string;
   reference: string;
@@ -50,6 +51,7 @@ export default function DisplayStory({ story }: StoryObject) {
   return (
     <div className="bg-base-200 flex justify-center items-center flex-col">
       <div className="headings py-2 sm:px-2 text-center">
+ 
         <h1 className="sm:mx-2 text-7xl font-bold">{story.title}</h1>
         <h1 className="text-3xl font-bold sm:mx-2">{story.reference}</h1>
       </div>

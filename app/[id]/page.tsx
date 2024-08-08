@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import DisplayStory from './DisplayStory';
 import Recomendation from './Recomendation';
-import Error from 'next/error';
-;
+import { notFound } from 'next/navigation';
 
 // import {stories} from '/stories.json';
 interface Story {
@@ -45,6 +44,8 @@ export default async function Page({ params }:Story) {
   
 
   const viewingStory: Story = stories.find((story) =>  story.title == title);
+
+  if(!viewingStory) return notFound(); //how to do not found page
   // if(!viewingStory) return <Error statusCode={404}/>;
   // console.log('Viewing Story is second:', viewingStory);
   

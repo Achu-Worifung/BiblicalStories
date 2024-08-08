@@ -10,6 +10,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/biblicalstoriesimg/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'onedrive.live.com',
+                port: '',
+                pathname: '/bible project images/**',
+            }
         ],
     }
 }

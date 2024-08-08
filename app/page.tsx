@@ -1,9 +1,10 @@
-'use client'
+
 import Image from "next/image";
 import Footer from "@homepage/Footer";
 import Navbar from "@homepage/Navbar";
 import MainContent from "@homepage/MainContent";
-import { useState, useEffect } from "react";
+import StoryOfTheDay from "@homepage/StoryOfTheDay";
+
 
 interface Story {
   title: string;
@@ -18,37 +19,23 @@ interface Story {
   };
 }
 
-export default function Home() {
-  const fetchStories = async (): Promise<Story[]> => {
-    try {
-      const res = await fetch("/stories.json");
-      if (!res.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await res.json();
-      // console.log(data.stories);
-      return data.stories;
-    } catch (err) {
-      console.error("Error occurred while fetching data", err);
-      return []; // Return an empty array on error
-    }
-  };
+export default async function Home() {
+  const Stories = await getStories();
+  console.log('stories in home:',Stories);
+  
 
-  const [stories, setStories] = useState<Story[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchStories();
-      setStories(data);
-    };
-    fetchData();
-  }, []);
-
+  
   return (
     <div>
       <Navbar />
-      <MainContent stories={stories} />
+      <StoryOfTheDay stories={Stories}/>
+      <MainContent stories={Stories} />
       <Footer />
     </div>
   );
+}
+async function getStories() {
+  const res = await fetch("http://localhost:3000/newStories.json");
+  const data = await res.json();
+  return data.stories;
 }

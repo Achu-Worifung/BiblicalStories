@@ -1,0 +1,332 @@
+{
+    "stories": [
+      {
+        "comment": "Here is how you store the images; use something like Google Drive to host it",
+        "title": "Creation of the World",
+        "reference": "Genesis 1:1-21; Genesis 2:1-4",
+        "content": "", 
+        "image": "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible%20project%20images/creation%20of%20the%20earth.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Moses",
+          "categories": ["Old Testament", "Creation"]
+        }
+      },
+      {
+        "title": "The Fall",
+        "reference": "Genesis 2:5-25; Genesis 3:1-24",
+        "content": "In those days, Caesar Augustus issued a decree that a census should be taken of the entire Roman world...",
+        "verse":"Gensis 2:5-25; Genesis 3:1-24",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/the fall of man.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "moses",
+          "categories": ["Creation", "old Testament"]
+        }
+      },
+      {
+        "title": "Noah's Ark",
+        "reference": "Genesis 6:9-9:17",
+        "content": "God instructed Noah to build an ark and bring two of every kind of animal...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/the fall of man.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Moses",
+          "categories": ["Divine Intervention", "Old Testament", "Judgement"]
+        }
+      },
+      {
+        "title": "The Ten Commandments",
+        "reference": "Exodus 20:1-17",
+        "content": "And God spoke all these words: 'I am the Lord your God, who brought you out of Egypt...'",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Moses",
+          "categories": ["Law", "Covenant", "Old Testament"]
+        }
+      },
+      {
+        "title": "Sodom and Gamorrah",
+        "reference": "Genesis 18:16-33; Genesis 19:38",
+        "content": "In those days, Caesar Augustus issued a decree that a census should be taken of the entire Roman world...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/sodm and gamorah.jpeg",
+        "fit": "",
+        "position": "center",
+        "metadata": {
+          "author": "Luke",
+          "categories": ["Judgement", "old Testament", "Deliverance"]
+        }
+      },
+      {
+        "title": "David and Goliath",
+        "reference": "1 Samuel 17:1-58",
+        "content": "The Philistine giant Goliath challenged the Israelites, but the young shepherd David defeated him with a sling and a stone...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/david vs goliath.jpg",
+        "fit": "cover",
+        "position": "70% 100%",
+        "metadata": {
+          "author": "Unknown",
+          "categories": ["Battle", "Faith"]
+        }
+      },
+      
+      {
+        "title": "The Good Samaritan",
+        "reference": "Matthew 28:1-15",
+        "content": "A man was going down from Jerusalem to Jericho when he was attacked by robbers. A priest and a Levite passed by, but a Samaritan helped him...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Parable", "Forgiveness"]
+        }
+      },
+      {
+        "title": "The Resurrection",
+        "reference": "1 Samuel 17:1-58",
+        "content": "The Philistine giant Goliath challenged the Israelites, but the young shepherd David defeated him with a sling and a stone...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Unknown",
+          "categories": ["Battle", "Faith", "Resurrection", "prophecy"]
+        }
+      },
+      {
+        "title": "Moses and the Burning Bush",
+        "reference": "Exodus 3:1-22",
+        "content": "Moses was tending the flock of Jethro when he saw a burning bush. God spoke to him and revealed His name...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Moses",
+          "categories": ["Encounter", "Divine Intervention", "Old Testament"]
+        }
+      },
+      {
+        "title": "The Prodigal Son",
+        "reference": "Luke 15:11-32",
+        "content": "A man had two sons. The younger one asked for his share of the inheritance, wasted it, and returned home repentant...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Jesus",
+          "categories": ["Parable", "Forgiveness", "Repentance"]
+        }
+      },
+      {
+        "title": "The Exodus",
+        "reference": "Exodus 12:29-51",
+        "content": "God brought the Israelites out of Egypt with signs and wonders, and they celebrated the Passover...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/moses splitting the sea.png",
+        "fit": "cover",
+        "position": "100% 00%",
+        "metadata": {
+          "author": "Moses",
+          "categories": ["Deliverance", "Divine Intervention", "Old Testament", "Faithfulness"]
+        }
+      },
+      {
+        "title": "The nativity of Jesus",
+        "reference": "Luke 1:5-80; Luke 2:1-21",
+        "content": "Jesus delivered the Beatitudes and other teachings on a mountainside, emphasizing love, humility, and righteousness...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/birth of christ.jpg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Miracle", "New Testament"]
+        }
+      },
+      {
+        "title": "The Sermon on the Mount",
+        "reference": "Matthew 5-7",
+        "content": "Jesus delivered the Beatitudes and other teachings on a mountainside, emphasizing love, humility, and righteousness...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/sermon on the mount.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Teaching", "New Testament"]
+        }
+      },
+      {
+        "title": "Jesus feeds 5,000",
+        "reference": "Matthew 14:13-21",
+        "content": "Jesus fed a large crowd with five loaves and two fish, demonstrating His miraculous power...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Miracle", "New Testament"]
+        }
+      },
+      {
+        "title": "The story of Ruth",
+        "reference": "Ruth 1:1-22; Ruth 2:1-23; Ruth 3:1-18;Ruth 4:1-16",
+        "content": "Jesus fed a large crowd with five loaves and two fish, demonstrating His miraculous power...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/ruth .jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Deliverance", "old Testament", "Faithfulness"]
+        }
+      },
+      {
+        "title": "Daniel in the Lion's Den",
+        "reference": "Daniel 6:1-28",
+        "content": "Daniel, a faithful servant of God, was thrown into a den of lions but was protected by God's angels...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/lion den.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Daniel",
+          "categories": ["Faithfulness", "Divine Intervention", "Old Testament", "Deliverance"]
+        }
+      },
+      {
+        "title": "The Fiery Furnace",
+        "reference": "Daniel 3:1-25",
+        "content": "Daniel, a faithful servant of God, was thrown into a den of lions but was protected by God's angels...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/furnace.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Daniel",
+          "categories": ["Faithfulness", "Divine Intervention", "Old Testament", "Deliverance"]
+        }
+      },
+      {
+        "title": "The Rich man and Lazarus",
+        "reference": "Luke 16:19-31",
+        "content": "Daniel, a faithful servant of God, was thrown into a den of lions but was protected by God's angels...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/rich man and the poor man.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Daniel",
+          "categories": ["new Testament", "parable"]
+        }
+      },
+      {
+        "title": "The Tower of babel",
+        "reference": "Genesis 11:1-9",
+        "content": "Jesus delivered the Beatitudes and other teachings on a mountainside, emphasizing love, humility, and righteousness...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/the_tower_of_babel.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Judgement", "old Testament"]
+        }
+      },
+      {
+        "title": "Jonah and the Big Fish",
+        "reference": "Jonah 1:1-17; 2:1-10",
+        "content": "God called Jonah to go to Nineveh, but he tried to escape. A big fish swallowed him, and he prayed for deliverance...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/jonah.jpeg",
+        "fit": "cover",
+        "position": "40% 100%",
+        "metadata": {
+          "author": "Jonah",
+          "categories": ["Repentance", "Divine Intervention", "Old Testament"]
+        }
+      },
+      {
+        "title": "The Transfiguration",
+        "reference": "Matthew 17:1-13",
+        "content": "Jesus took Peter, James, and John up a mountain, where He was transfigured before them, revealing His divine glory...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Revelation", "New Testament"]
+        }
+      },
+      {
+        "title": "Raising Lazarus from the Dead",
+        "reference": "John 11:1-45",
+        "content": "Jesus raised Lazarus, who had been dead for four days, demonstrating His power over death...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "John",
+          "categories": ["Miracle", "New Testament"]
+        }
+      },
+      {
+        "title": "The Healing of the Blind Man",
+        "reference": "John 9:1-41",
+        "content": "Jesus healed a man born blind, revealing Himself as the light of the world...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "John",
+          "categories": ["Miracle", "New Testament"]
+        }
+      },
+      {
+        "title": "The Last Supper",
+        "reference": "Matthew 26:17-30",
+        "content": "Jesus shared a Passover meal with His disciples, instituting the Lord's Supper and predicting His betrayal...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Passion", "New Testament"]
+        }
+      },
+      {
+        "title": "The Crucifixion",
+        "reference": "Luke 23:26-49",
+        "content": "Jesus was crucified on the cross, bearing the sins of humanity and offering salvation to all who believe...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Luke",
+          "categories": ["Passion", "New Testament"]
+        }
+      },
+      {
+        "title": "Abraham & Issac",
+        "reference": "Genesis 22:1-19",
+        "content": "Jesus was crucified on the cross, bearing the sins of humanity and offering salvation to all who believe...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/abraham sacrifice his son.jpeg",
+        "fit": "cover",
+        "position": "center",
+        "alt":"The Crucifixion",
+        "metadata": {
+          "author": "Luke",
+          "categories": ["Passion", "New Testament"]
+        }
+      },
+      {
+        "title": "The Writing on the wall",
+        "reference": "Daniel 5:1-30",
+        "content": "On the third day, Jesus rose from the dead, defeating sin and death and bringing hope to the world...",
+        "image":"https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/handwritin on the wall.jpg",
+        "fit": "cover",
+        "position": "center",
+        "metadata": {
+          "author": "Matthew",
+          "categories": ["Judgement", "old Testament"]
+        }
+      }
+    ]
+  }

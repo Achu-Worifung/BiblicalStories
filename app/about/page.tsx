@@ -6,7 +6,7 @@ export default function about() {
       <div className="hero bg-base-300 min-h-screen">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <h1 className="text-5xl font-bold">About Us</h1>
+            <h1 className="text-5xl font-bold ">About Us</h1>
             <p className="py-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
               suscipit nostrum sunt, dolorem delectus id quia, quo explicabo
