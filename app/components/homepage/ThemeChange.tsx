@@ -1,31 +1,31 @@
 'use client'
 import { useState, useEffect } from "react";
+
 export default function ThemeChange() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-  useEffect(() =>
-  {
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    // Retrieve the theme from localStorage after the component has mounted
+    const storedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(storedTheme);
+    document.querySelector("html")!.setAttribute("data-theme", storedTheme);
+  }, []);
+
+  useEffect(() => {
+    // Update localStorage and the document's data-theme attribute when the theme changes
     localStorage.setItem("theme", theme);
-    const locaalTheme = localStorage.getItem("theme");
-    document.querySelector("html")!.setAttribute("data-theme", locaalTheme!);
-
-    
-
+    document.querySelector("html")!.setAttribute("data-theme", theme);
   }, [theme]);
 
-  const toggleTheme = (e) =>
-  {
-    if(e.target.checked)
-    {
+  const toggleTheme = (e) => {
+    if (e.target.checked) {
       setTheme("light");
-    }
-    else 
-    {
+    } else {
       setTheme("dark");
     }
-  }
+  };
+
   return (
-
-
     <label className="flex cursor-pointer gap-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function ThemeChange() {
         value="synthwave"
         className="toggle theme-controller"
         onChange={toggleTheme}
-        checked={theme === "light" ?true:false}
+        checked={theme === "light"}
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"

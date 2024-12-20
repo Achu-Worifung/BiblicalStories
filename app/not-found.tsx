@@ -13,7 +13,7 @@ export default function notFound() {
       <div className="hero-content text-center">
         <div className="max-w-md ">
           <h1 className="text-7xl font-bold">404</h1>
-          <p className="py-6">Oops! The page you're looking for is not here.</p>
+          <p className="py-6">Oops! The page you&apos;re looking for is not here.</p>
           <div>
             <Link href="/" className="btn btn-primary btn-outline mx-3">
               Home

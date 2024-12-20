@@ -21,7 +21,7 @@ interface Story {
 
 export default async function Home() {
   const Stories = await getStories();
-  console.log('stories in home:',Stories);
+  // console.log('stories in home:',Stories);
   
 
   
@@ -35,7 +35,7 @@ export default async function Home() {
   );
 }
 async function getStories() {
-  const res = await fetch("http://localhost:3000/newStories.json");
+  const res = await fetch("http://localhost:3000/stories.json");
   const data = await res.json();
   return data.stories;
 }

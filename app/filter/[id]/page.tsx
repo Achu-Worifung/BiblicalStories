@@ -29,9 +29,10 @@ export default async function filter({ params }) {
   );
 }
 function decode(id: string) {
-  return id.replace("-", " ");
+  return id.replace(/-/g, " ");
 }
 async function getStories() {
+  // const res = await fetch("http://localhost:3000/stories.json", { next: { revalidate: 1 } });
   const res = await fetch("http://localhost:3000/stories.json");
   const data = await res.json();
   return data.stories;

@@ -27,8 +27,14 @@ const imageClassName = (prop: Object) => {
 };
 const formatURL = (title) =>
 {
-  return title.replace(/ /g, '-');
+  const newTitle = title.replace(/ /g, '-');
+  // console.log('newTitle:',newTitle);
+  
+ 
+  
+  return newTitle;
 }
+
 
 
 
@@ -38,9 +44,9 @@ export default function MainContent({ stories }: MainContentProps) {
       {stories.map((story: Story, i:number) => (
         <div key = {i} className="card bg-base-300 w-80 shadow-xl max-w-[428px]">
           <figure>
-            <Image
+            <img
               src={story.image}
-              alt="Shoes"
+              alt={story.title}
               className={imageClassName({ fit: story.fit, position: story.position })}
               width={320}
               height={200}

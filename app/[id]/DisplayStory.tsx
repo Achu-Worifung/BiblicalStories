@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { fetchStories } from "@util/storyWebScrap";
 
-
 interface StoryObject {
   title: string;
   reference: string;
@@ -11,9 +10,9 @@ interface StoryObject {
 }
 
 export default function DisplayStory({ story }: StoryObject) {
-  const [version, setVersion] = useState();
-  const [TheStory, setTheStory] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [version, setVersion] = useState<string | null>(null);
+  const [TheStory, setTheStory] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const savedVersion = localStorage.getItem("version");
@@ -42,7 +41,7 @@ export default function DisplayStory({ story }: StoryObject) {
   if (loading) {
     return (
       <div className="bg-base-200 w-screen h-screen items-center flex justify-center flex-col">
-        <span className="loading loading-infinity  w-24"></span>
+        <span className="loading loading-infinity w-24"></span>
         <h1>Loading...</h1>
       </div>
     );
@@ -51,7 +50,6 @@ export default function DisplayStory({ story }: StoryObject) {
   return (
     <div className="bg-base-200 flex justify-center items-center flex-col">
       <div className="headings py-2 sm:px-2 text-center">
- 
         <h1 className="sm:mx-2 text-7xl font-bold">{story.title}</h1>
         <h1 className="text-3xl font-bold sm:mx-2">{story.reference}</h1>
       </div>

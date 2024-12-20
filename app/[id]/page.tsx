@@ -30,20 +30,19 @@ export default async function Page({ params }:Story) {
  
   
   const formatURl = (title:String) => {
-    // console.log('Title:',stories);
+
+    var newTitle = title.replace(/-/g, ' ');
     
-    return title.replace(/-/g, ' ');
+    return decodeURIComponent(newTitle);
   }
   // getting the story
 
   const title = formatURl(params.id);
 
-  // console.log('title:',title , 'params.id:', params.id);
-  
-
-  
-
   const viewingStory: Story = stories.find((story) =>  story.title == title);
+
+  
+  // console.log('Viewing Story:', viewingStory);
 
   if(!viewingStory) return notFound(); //how to do not found page
   // if(!viewingStory) return <Error statusCode={404}/>;
