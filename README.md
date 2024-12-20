@@ -66,8 +66,7 @@ This project is a beautifully crafted Next.js website that showcases biblical st
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-repo/biblical-stories.git
-   cd biblical-stories
+   git clone https://github.com/Achu-Worifung/BiblicalStories.git
    ```
 
 2. **Install Dependencies**
