@@ -44,7 +44,7 @@ export default function MainContent({ stories }: MainContentProps) {
       {stories.map((story: Story, i:number) => (
         <div key = {i} className="card bg-base-300 w-80 shadow-xl max-w-[428px]">
           <figure>
-            <img
+            <Image
               src={story.image}
               alt={story.title}
               className={imageClassName({ fit: story.fit, position: story.position })}
