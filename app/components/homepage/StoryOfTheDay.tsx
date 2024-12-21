@@ -22,19 +22,24 @@ export default function StoryOfTheDay({ stories }) {
     const valueString = encodeURIComponent(JSON.stringify(value));
     document.cookie = `${name}=${valueString};${expires};path=/`;
   }
-  function getCookie(name:String) {
+  function getCookie(name: string) {
     const nameEQ = name + "=";
-    const ca = document.cookie.split(";");
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) === " ") c = c.substring(1, c.length);
-      if (c.indexOf(nameEQ) === 0) {
-        const valueString = c.substring(nameEQ.length, c.length);
-        return JSON.parse(decodeURIComponent(valueString));
+    const cookies = document.cookie.split(";");
+    for (let cookie of cookies) {
+      cookie = cookie.trim(); // Trim leading/trailing whitespace
+      if (cookie.startsWith(nameEQ)) {
+        const valueString = cookie.substring(nameEQ.length);
+        try {
+          return JSON.parse(decodeURIComponent(valueString));
+        } catch (error) {
+          console.error("Error parsing cookie value:", error);
+          return null;
+        }
       }
     }
     return null;
   }
+  
   function getRandomStory(stories) {
     const randomIndex = Math.floor(Math.random() * stories.length);
     return stories[randomIndex];
