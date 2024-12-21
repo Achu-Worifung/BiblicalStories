@@ -4,6 +4,7 @@ import Footer from "@homepage/Footer";
 import Navbar from "@homepage/Navbar";
 import MainContent from "@homepage/MainContent";
 import StoryOfTheDay from "@homepage/StoryOfTheDay";
+import storiesData from '../public/stories.json';
 
 
 interface Story {
@@ -34,8 +35,6 @@ export default async function Home() {
     </div>
   );
 }
-async function getStories() {
-  const res = await fetch("http://localhost:3000/stories.json");
-  const data = await res.json();
-  return data.stories;
+function getStories() {
+  return storiesData.stories;
 }
