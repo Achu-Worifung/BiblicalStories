@@ -1,13 +1,15 @@
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { FocusCards } from "@/components/ui/focus-card";
 import {SOTD} from "@/components/ui/story-of-the-day";
+import {FilterBar} from "@/components/layout/filterbar";
+import { Card } from "@/components/ui/card";
 // import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 
 export default function Home() {
    const cards = [
     {
       title: "Forest Adventure",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/lion den.jpeg",
     },
     {
       title: "Valley of life",
@@ -27,11 +29,23 @@ export default function Home() {
     },
     {
       title: "The First Rule",
-      src: "https://assets.aceternity.com/the-first-rule.png",
+      src: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/the fall of man.jpeg",
     },
   ];
   return (
     <div className="w-screen flex flex-col items-center justify-center text-white">
+
+     {cards.map((card, index) =>
+    {
+      return (
+        <Card
+          key={index}
+          title={card.title}
+          url="#"
+          src={card.src}
+        />
+      );
+    })}
 
      <FocusCards cards={cards}/>
 
@@ -99,6 +113,7 @@ export default function Home() {
       desc="Daniel, a faithful servant of God, was thrown into a den of lions but was protected by God's angels"
       url="https://www.bible.com/en-GB/bible/111/DAN.6.NIV"
     />
+    <FilterBar/>
     </div>
   );
 }
