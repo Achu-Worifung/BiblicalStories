@@ -40,7 +40,7 @@ body {
   background-position: -150% 0;
   pointer-events: none;
   z-index: 2;
-  transition: background-position 1.3s ease;
+  transition: background-position 1s ease;
 }
 
 .glare-card:hover::before {
