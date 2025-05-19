@@ -9,6 +9,7 @@ import { data } from "motion/react-client";
 
 import { IconMathGreater, IconMathLower  } from '@tabler/icons-react';
 import { useState } from "react";
+import {Footer} from "@/components/layout/footer";
 // import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { Recommendations } from "@/components/ui/recommendationCard";
 
@@ -139,6 +140,7 @@ export default function Home() {
     />
       {/* <TracingBeamDemo /> */}
       <Recommendations data={cards} />
+      <Footer />
     </div>
   );
 }
