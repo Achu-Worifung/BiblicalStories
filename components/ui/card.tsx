@@ -11,12 +11,12 @@ export function Card({
   src: string;
 }) {
   return (
-    <CardContainer className="inter-var">
+    <CardContainer className="inter-var snap-start ">
       <CardBody>
         <CardItem
           translateZ="100"
           as="div"
-          className="relative glare-card overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out m-24 max-w-[294px] md:max-w-[290px] cursor-pointer hover:scale-[1.02] rounded-lg shadow"
+          className="relative glare-card overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out m-24 max-w-[294px] md:max-w-[290px] cursor-pointer hover:scale-[1.02] rounded-lg shadow "
           onClick={() => {
             window.open(url, "_blank");
           }}
