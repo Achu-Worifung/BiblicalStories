@@ -12,6 +12,8 @@ import { useState } from "react";
 import {Footer} from "@/components/layout/footer";
 // import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { Recommendations } from "@/components/ui/recommendationCard";
+import { Sidebar } from "@/components/layout/sidebar";
+import { Suggestion } from "@/components/ui/suggestion";
 
 export default function Home() {
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -140,6 +142,7 @@ export default function Home() {
     />
       {/* <TracingBeamDemo /> */}
       <Recommendations data={cards} />
+      <Suggestion />
       <Footer />
     </div>
   );
