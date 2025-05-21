@@ -12,7 +12,7 @@ import { useState } from "react";
 import {Footer} from "@/components/layout/footer";
 // import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { Recommendations } from "@/components/ui/recommendationCard";
-import { Sidebar } from "@/components/layout/sidebar";
+import { SidebarDemo } from "@/components/layout/sidebarDemo";
 import { Suggestion } from "@/components/ui/suggestion";
 
 export default function Home() {
@@ -144,6 +144,7 @@ export default function Home() {
       <Recommendations data={cards} />
       <Suggestion />
       <Footer />
+      <SidebarDemo />
     </div>
   );
 }
