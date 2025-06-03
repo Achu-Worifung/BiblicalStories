@@ -30,7 +30,7 @@ export function SOTD({ title, src, desc, url }: { title: string, src: string, de
           <CardItem
             translateZ={20}
             as="button"
-            className="text-neutral-500 max-w-sm mt-2 dark:text-neutral-300 text-xl font-bold"
+            className="text-neutral-500 max-w-sm mt-2 dark:text-neutral-300 text-xl font-bold text-left"
           >
            {title}
           </CardItem>
