@@ -4,7 +4,7 @@ import { SOTD } from "@/components/ui/story-of-the-day";
 import { getScriptureOfTheDay } from "@/lib/get-scripture-of-the-day";
 import { stories } from "@/public/stories";
 import { Card } from "@/components/ui/card";
-
+import {Filter} from "@/components/ui/filter";
 import { storyInterface } from "@/public/interfaces";
 import { Footer } from "@/components/layout/footer";
 
@@ -24,7 +24,8 @@ export default function Home() {
         desc={sotd.content}
         url={formatURL(sotd.title)}
       />
-      <div className="max-w-screen flex flex-wrap h-fit">
+      <Filter />
+      <div className="max-w-screen flex flex-wrap h-fit justify-center items-center">
         {stories.map((card, index) => {
           return (
             <Card key={index} title={card.title} url={formatURL(card.title)} src={card.image} />

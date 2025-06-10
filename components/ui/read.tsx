@@ -19,7 +19,7 @@ export function Read({
   version: string;
 }) {
   return (
-    <TracingBeam className="px-6 !h-fit">
+    <TracingBeam className="px-6 !h-min">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         <h1 className="text-3xl font-bold mb-4">{title}</h1>
         <h3 className="text-xl text-gray-500 mb-4 font-semibold">

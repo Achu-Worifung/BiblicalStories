@@ -1,12 +1,11 @@
 "use client";
-import React, {useState} from "react";
-import { Spotlight } from "@/components/ui/spotlight-new";
+import React, { useState } from "react";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
-import {SendSuggestion} from "@/lib/send-suggestion";
+import { SendSuggestion } from "@/lib/send-suggestion";
 
 export function Suggestion() {
-  const[ref, setRef] = useState("");
-  const[cat, setCat] = useState("");
+  const [ref, setRef] = useState("");
+  const [cat, setCat] = useState("");
   const Reference = [
     "Matthew 14:13-21",
     "Luke 15:11-32",
@@ -19,8 +18,8 @@ export function Suggestion() {
     "Forgiveness, Redemption",
     "Resurrection, Hope",
     "Courage, Faith",
-  ]
-  
+  ];
+
   const refChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCat(e.target.value);
   };
@@ -28,18 +27,20 @@ export function Suggestion() {
     setRef(e.target.value);
   };
   const onSubmit = () => {
-   SendSuggestion({category: cat, reference: ref});
+    SendSuggestion({ category: cat, reference: ref });
   };
 
   return (
-    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden flex-col">
-      <Spotlight />
+    <div className="h-full w-full rounded-md flex md:items-center md:justify-center  antialiased  relative overflow-hidden flex-col my-10">
+
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl/16 font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
           Make A suggestion <br /> Improve the experiecne
         </h1>
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-          Thank you for taking an interest in this project. We appreciate your feedback and will definitely look into your suggestion. We will work on adding it to the library as soon as possible.
+          Thank you for taking an interest in this project. We appreciate your
+          feedback and will definitely look into your suggestion. We will work
+          on adding it to the library as soon as possible.
         </p>
       </div>
       <div className=" flex flex-col justify-center gap-5 ">
@@ -55,9 +56,12 @@ export function Suggestion() {
           onChange={catChange}
           onSubmit={onSubmit}
         />
-         <button className="px-8 py-0.5  border-2 border-black dark:border-white uppercase bg-white text-black transition  text-sm shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] cursor-pointer active:scale-95 transform-all duration-75" onClick={onSubmit}>
-        Submit
-      </button>
+        <button
+          className="px-8 py-0.5  border-2 border-black dark:border-white uppercase bg-white text-black transition  text-sm shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] cursor-pointer active:scale-95 transform-all duration-75"
+          onClick={onSubmit}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );
