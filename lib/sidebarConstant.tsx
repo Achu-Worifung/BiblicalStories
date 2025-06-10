@@ -1,10 +1,10 @@
 import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
-  IconHome,
   IconNewSection,
-  IconTerminal2,
+  IconUsersGroup,
+  IconVocabulary, 
+  IconBrandTinder,
+  IconBook 
+  
 } from "@tabler/icons-react";
 export const bibleCharacters : string[] = [
   "Aaron",
@@ -125,7 +125,7 @@ export   const themes : string[] = [
       {
         title: "Testament",
         icon: (
-          <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
         href: "#",
       },
@@ -133,21 +133,21 @@ export   const themes : string[] = [
       {
         title: "Theme",
         icon: (
-          <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconBrandTinder className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
         href: "#",
       },
       {
         title: "Character",
         icon: (
-          <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconUsersGroup className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
         href: "#",
       },
       {
         title: "Book",
         icon: (
-          <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconVocabulary className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
         href: "#",
       }

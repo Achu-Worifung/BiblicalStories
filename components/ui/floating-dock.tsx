@@ -22,15 +22,17 @@ export const FloatingDock = ({
   items,
   desktopClassName,
   mobileClassName,
+  changeOpenState,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   desktopClassName?: string;
   mobileClassName?: string;
+  changeOpenState?: (key: string) => void;
 }) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName}  />
-      <FloatingDockMobile items={items} className={mobileClassName} />
+      <FloatingDockDesktop items={items} className={desktopClassName} changeOpenState={changeOpenState}  />
+      <FloatingDockMobile items={items} className={mobileClassName} changeOpenState={changeOpenState}  />
     </>
   );
 };
@@ -38,9 +40,11 @@ export const FloatingDock = ({
 const FloatingDockMobile = ({
   items,
   className,
+  changeOpenState,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
+  changeOpenState?: (key: string) => void;
 }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -68,13 +72,16 @@ const FloatingDockMobile = ({
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
-                <a
-                  href={item.href}
+                <div
+                  onClick={() => {
+                    changeOpenState?.(item.title);
+                    setOpen(false);
+                  }}
                   key={item.title}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
-                </a>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -93,9 +100,11 @@ const FloatingDockMobile = ({
 const FloatingDockDesktop = ({
   items,
   className,
+  changeOpenState,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
+  changeOpenState?: (key: string) => void;
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
@@ -108,7 +117,7 @@ const FloatingDockDesktop = ({
       )}
     >
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <IconContainer mouseX={mouseX} key={item.title} {...item} changeOpenState={changeOpenState}/>
       ))}
     </motion.div>
   );
@@ -118,10 +127,12 @@ function IconContainer({
   mouseX,
   title,
   icon,
+  changeOpenState,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
+  changeOpenState?: (key: string) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -167,7 +178,7 @@ function IconContainer({
 
 
   return (
-    <a href={`#${title}`}   className="cursor-pointer">
+    <div className="cursor-pointer" onClick={() => changeOpenState?.(title)}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -194,6 +205,6 @@ function IconContainer({
           {icon}
         </motion.div>
       </motion.div>
-    </a>
+    </div>
   );
 }

@@ -38,7 +38,7 @@ export function TestamentFilter() {
 export function ThemeFilter() {
   const [checkedThemes, setCheckedThemes] = useState<any>({});
 
-  const handleCheckboxChange = (theme : string) => {
+  const handleCheckboxChange = (theme: string) => {
     setCheckedThemes((prev) => ({
       ...prev,
       [theme]: !prev[theme],
@@ -69,7 +69,7 @@ export function ThemeFilter() {
 export function CharacterFilter() {
   const [filtered, setFiltered] = useState(bibleCharacters);
   const [checkedCharacters, setCheckedCharacters] = useState({});
-  const handleCheckboxChange = (character : string) => {
+  const handleCheckboxChange = (character: string) => {
     setCheckedCharacters((prev) => ({
       ...prev,
       [character]: !prev[character],
@@ -124,7 +124,7 @@ export function FilterBook() {
       [book]: !prev[book],
     }));
   };
-  const filterBooks = (e : React.ChangeEvent<HTMLInputElement>) => {
+  const filterBooks = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredCharacters = bibleBooks.filter((book) =>
       book.toLowerCase().includes(searchTerm)
@@ -158,6 +158,39 @@ export function FilterBook() {
               {book}
             </label>
           </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function FilterGenre() {
+  const genre = ["Parable", "Prophecy", "Law", "Poetry", "Apocalyptic"];
+  const [checkedGenres, setCheckedGenres] = useState<any>({});
+  const handleCheckboxChange = (genre: string) => {
+    setCheckedGenres((prev) => ({
+      ...prev,
+      [genre]: !prev[genre],
+    }));
+  };
+  return (
+    <div className="flex flex-col items-center justify-center py-4" id="Genre">
+      <p className="font-bold text-2xl">Filter by Genre</p>
+      <div className="flex gap-20 py-3">
+        {genre.map((genre: string) => (
+          <section className="" key={genre}>
+            <input
+              type="checkbox"
+              id={genre}
+              name={genre}
+              value={genre}
+              checked={!!checkedGenres[genre]}
+              onChange={() => handleCheckboxChange(genre)}
+            />
+            <label htmlFor={genre} className="text-lg">
+              {genre}
+            </label>
+          </section>
         ))}
       </div>
     </div>
