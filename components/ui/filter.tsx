@@ -10,8 +10,9 @@ import {
   ThemeFilter,
 } from "@/components/ui/filters-components";
 import { filterLinks } from "@/lib/sidebarConstant";
+import { actions as actionInterface } from "@/public/interfaces";
 
-export function Filter() {
+export function Filter({actions}: {actions: actionInterface}) {
   
   const [open, setOpen] = useState<string>("")
   const updateOpenState = (key: string) =>
@@ -27,11 +28,11 @@ export function Filter() {
     <div className="flex items-center justify-center w-full flex-col py-10">
       <FloatingDock items={filterLinks} 
            changeOpenState={updateOpenState}/>
-      {open === "Testament" && <TestamentFilter />}
-      {open === "Theme" && <ThemeFilter />}
-      {open === "Character" && <CharacterFilter />}
-      {open === "Book" && <FilterBook />}
-      {open ==="Genres" && <FilterGenre />}
+      {open === "Testament" && <TestamentFilter filter= {actions.testamentFilter}/>}
+      {open === "Theme" && <ThemeFilter filter={actions.themeFilter} />}
+      {open === "Character" && <CharacterFilter filter ={actions.characterFilter}/>}
+      {open === "Book" && <FilterBook filter ={actions.bookFilter}/>}
+      {open ==="Genres" && <FilterGenre filter={actions.genreFilter}/>}
     </div>
   );
 }

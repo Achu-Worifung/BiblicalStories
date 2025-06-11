@@ -1,6 +1,23 @@
 import { bibleCharacters, themes, bibleBooks } from "@/lib/sidebarConstant";
-import { useState } from "react";
-export function TestamentFilter() {
+import { useEffect, useState } from "react";
+export function TestamentFilter({filter}: {filter: (testament: string[]) => void}) {
+  const [checkedTestaments, setCheckedTestaments] = useState<string[]>([]);
+  const handleCheckboxChange = (testament: string) => {
+    // Toggle the checked state of the testament
+    if (checkedTestaments?.includes(testament)) {
+      setCheckedTestaments((prev) => prev?.filter((t) => t !== testament));
+      return;
+    }
+    setCheckedTestaments((prev) => [...(prev || []), testament]);
+
+
+
+  };
+useEffect(() => {
+   console.log("Checked Testaments:", checkedTestaments);
+    // Call the filter function with the selected testaments
+    filter(checkedTestaments);
+}, [checkedTestaments]);
   return (
     <div
       className="py-4 flex flex-col items-center justify-center "
@@ -13,7 +30,9 @@ export function TestamentFilter() {
             type="checkbox"
             id="old-testament"
             name="testament"
-            value="old-testament"
+            value="old testament"
+            onChange={(e) => {handleCheckboxChange(e.target.value);} }
+            
           />
           <label htmlFor="old-testament" className="text-lg">
             Old Testament
@@ -24,7 +43,8 @@ export function TestamentFilter() {
             type="checkbox"
             id="new-testament"
             name="testament"
-            value="new-testament"
+            value="new testament"
+            onChange={(e) => {handleCheckboxChange(e.target.value);} }
           />
           <label htmlFor="new-testament" className="text-lg">
             New Testament
@@ -35,15 +55,22 @@ export function TestamentFilter() {
   );
 }
 
-export function ThemeFilter() {
-  const [checkedThemes, setCheckedThemes] = useState<any>({});
+export function ThemeFilter({filter}: {filter: (theme: string[]) => void}) {
+  const [checkedThemes, setCheckedThemes] = useState<string[]>([]);
 
   const handleCheckboxChange = (theme: string) => {
-    setCheckedThemes((prev) => ({
-      ...prev,
-      [theme]: !prev[theme],
-    }));
+    if (checkedThemes?.includes(theme)) {
+      setCheckedThemes((prev) => prev?.filter((t) => t !== theme));
+      return;
+    }
+    setCheckedThemes((prev) => [...(prev || []), theme]);
   };
+
+  useEffect(() => {
+    console.log("Checked Themes:", checkedThemes);
+    // Call the filter function with the selected themes
+    filter(checkedThemes);
+  }, [checkedThemes]);
   return (
     <div className="flex flex-col items-center justify-center py-4" id="Theme">
       <p className="font-bold text-2xl">Filter by Theme</p>
@@ -53,7 +80,6 @@ export function ThemeFilter() {
             <input
               type="checkbox"
               id={theme}
-              checked={!!checkedThemes[theme]}
               onChange={() => handleCheckboxChange(theme)}
             />
             <label htmlFor={theme} className="cursor-pointer capitalize">
@@ -66,15 +92,21 @@ export function ThemeFilter() {
   );
 }
 
-export function CharacterFilter() {
+export function CharacterFilter({filter}: {filter: (character: string[]) => void}) {
   const [filtered, setFiltered] = useState(bibleCharacters);
-  const [checkedCharacters, setCheckedCharacters] = useState({});
+  const [checkedCharacters, setCheckedCharacters] = useState<string[]>([]);
   const handleCheckboxChange = (character: string) => {
-    setCheckedCharacters((prev) => ({
-      ...prev,
-      [character]: !prev[character],
-    }));
+    if (checkedCharacters?.includes(character)) {
+      setCheckedCharacters((prev) => prev?.filter((t) => t !== character));
+      return;
+    }
+    setCheckedCharacters((prev) => [...(prev || []), character]);
   };
+  useEffect(() => {
+    console.log("Checked Characters:", checkedCharacters);
+    // Call the filter function with the selected characters
+    filter(checkedCharacters);
+  }, [checkedCharacters]);
   const filterCharacter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredCharacters = bibleCharacters.filter((character) =>
@@ -102,6 +134,7 @@ export function CharacterFilter() {
             <input
               type="checkbox"
               id={character}
+              value={character}
               checked={!!checkedCharacters[character]}
               onChange={() => handleCheckboxChange(character)}
             />
@@ -115,15 +148,21 @@ export function CharacterFilter() {
   );
 }
 
-export function FilterBook() {
+export function FilterBook({filter}: {filter: (book: string[]) => void}) {
   const [filtered, setFiltered] = useState(bibleBooks);
-  const [checkedBooks, setCheckedBooks] = useState({});
+  const [checkedBooks, setCheckedBooks] = useState<string[]>([]);
   const handleCheckboxChange = (book: string) => {
-    setCheckedBooks((prev) => ({
-      ...prev,
-      [book]: !prev[book],
-    }));
+    if (checkedBooks?.includes(book)) {
+      setCheckedBooks((prev) => prev?.filter((t) => t !== book));
+      return;
+    }
+    setCheckedBooks((prev) => [...(prev || []), book]);
   };
+  useEffect(() => {
+    console.log("Checked Books:", checkedBooks);
+    filter(checkedBooks);
+  }, [checkedBooks]);
+
   const filterBooks = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredCharacters = bibleBooks.filter((book) =>
@@ -164,15 +203,21 @@ export function FilterBook() {
   );
 }
 
-export function FilterGenre() {
+export function FilterGenre({filter}: {filter: (genre: string[]) => void}) {
   const genre = ["Parable", "Prophecy", "Law", "Poetry", "Apocalyptic"];
-  const [checkedGenres, setCheckedGenres] = useState<any>({});
+  const [checkedGenres, setCheckedGenres] = useState<string[]>([]);
   const handleCheckboxChange = (genre: string) => {
-    setCheckedGenres((prev) => ({
-      ...prev,
-      [genre]: !prev[genre],
-    }));
+    if (checkedGenres?.includes(genre)) {
+      setCheckedGenres((prev) => prev?.filter((t) => t !== genre));
+      return;
+    }
+    setCheckedGenres((prev) => [...(prev || []), genre]);
   };
+  useEffect(() => {
+    console.log("Checked Genres:", checkedGenres);
+    // Call the filter function with the selected genres
+    filter(checkedGenres);
+  }, [checkedGenres, filter]);
   return (
     <div className="flex flex-col items-center justify-center py-4" id="Genre">
       <p className="font-bold text-2xl">Filter by Genre</p>

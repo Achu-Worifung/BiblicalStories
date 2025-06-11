@@ -9,6 +9,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Moses",
           "categories": ["Old Testament", "Creation"]
         }
@@ -191,6 +192,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Daniel",
           "categories": ["Faithfulness", "Divine Intervention", "Old Testament", "Deliverance"]
         }
