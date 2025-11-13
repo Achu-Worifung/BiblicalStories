@@ -9,7 +9,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
-          "testament": "new testament",
+          "testament": "old testament",
           "author": "Moses",
           "categories": ["Old Testament", "Creation"]
         }
@@ -23,8 +23,9 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "moses",
-          "categories": ["Creation", "old Testament"]
+          "categories": ["Creation", "old testament"]
         }
       },
       {
@@ -35,6 +36,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Moses",
           "categories": ["Divine Intervention", "Old Testament", "Judgement"]
         }
@@ -47,6 +49,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Moses",
           "categories": ["Law", "Covenant", "Old Testament"]
         }
@@ -59,8 +62,9 @@
         "fit": "",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Luke",
-          "categories": ["Judgement", "old Testament", "Deliverance"]
+          "categories": ["Judgement", "old testament", "Deliverance"]
         }
       },
       {
@@ -71,6 +75,7 @@
         "fit": "cover",
         "position": "70% 100%",
         "metadata": {
+          "testament": "old testament",
           "author": "Unknown",
           "categories": ["Battle", "Faith"]
         }
@@ -84,6 +89,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Matthew",
           "categories": ["Parable", "Forgiveness"]
         }
@@ -96,6 +102,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Unknown",
           "categories": ["Battle", "Faith", "Resurrection", "prophecy"]
         }
@@ -108,6 +115,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Moses",
           "categories": ["Encounter", "Divine Intervention", "Old Testament"]
         }
@@ -120,6 +128,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Jesus",
           "categories": ["Parable", "Forgiveness", "Repentance"]
         }
@@ -132,6 +141,7 @@
         "fit": "cover",
         "position": "100% 00%",
         "metadata": {
+          "testament": "old testament",
           "author": "Moses",
           "categories": ["Deliverance", "Divine Intervention", "Old Testament", "Faithfulness"]
         }
@@ -144,6 +154,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Matthew",
           "categories": ["Miracle", "New Testament"]
         }
@@ -156,6 +167,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Matthew",
           "categories": ["Teaching", "New Testament"]
         }
@@ -168,6 +180,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Matthew",
           "categories": ["Miracle", "New Testament"]
         }
@@ -180,8 +193,9 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Matthew",
-          "categories": ["Deliverance", "old Testament", "Faithfulness"]
+          "categories": ["Deliverance", "old testament", "Faithfulness"]
         }
       },
       {
@@ -205,6 +219,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Daniel",
           "categories": ["Faithfulness", "Divine Intervention", "Old Testament", "Deliverance"]
         }
@@ -217,8 +232,9 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Daniel",
-          "categories": ["new Testament", "parable"]
+          "categories": ["new testament", "parable"]
         }
       },
       {
@@ -229,8 +245,9 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Matthew",
-          "categories": ["Judgement", "old Testament"]
+          "categories": ["Judgement", "old testament"]
         }
       },
       {
@@ -241,6 +258,7 @@
         "fit": "cover",
         "position": "40% 100%",
         "metadata": {
+          "testament": "old testament",
           "author": "Jonah",
           "categories": ["Repentance", "Divine Intervention", "Old Testament"]
         }
@@ -253,6 +271,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Matthew",
           "categories": ["Revelation", "New Testament"]
         }
@@ -265,6 +284,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "John",
           "categories": ["Miracle", "New Testament"]
         }
@@ -277,6 +297,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "John",
           "categories": ["Miracle", "New Testament"]
         }
@@ -289,6 +310,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Matthew",
           "categories": ["Passion", "New Testament"]
         }
@@ -301,6 +323,7 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "new testament",
           "author": "Luke",
           "categories": ["Passion", "New Testament"]
         }
@@ -314,8 +337,9 @@
         "position": "center",
         "alt":"The Crucifixion",
         "metadata": {
+          "testament": "old testament",
           "author": "Luke",
-          "categories": ["Passion", "New Testament"]
+          "categories": ["Passion", "Old Testament"]
         }
       },
       {
@@ -326,8 +350,9 @@
         "fit": "cover",
         "position": "center",
         "metadata": {
+          "testament": "old testament",
           "author": "Matthew",
-          "categories": ["Judgement", "old Testament"]
+          "categories": ["Judgement", "old testament"]
         }
       }
     ]

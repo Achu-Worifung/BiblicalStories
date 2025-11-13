@@ -1,3 +1,4 @@
+// 
 "use client";
 
 import { SOTD } from "@/components/ui/story-of-the-day";
@@ -9,7 +10,7 @@ import {
   storyInterface,
 } from "@/public/interfaces";
 import { Footer } from "@/components/layout/footer";
-import { useState } from "react";
+import { useState, useCallback } from "react"; // <-- 1. ADD useCallback HERE
 import { FilterBy } from "@/components/ui/filter-component";
 
 
@@ -17,28 +18,28 @@ export default function Home() {
   const [stories, setStories] = useState<storyInterface[]>(storyList);
 
   const [filteredStories, setFilteredStories] =
-    useState<storyInterface[]>(storyList);
+    useState<storyInterface[]>(stories);
 
 
   function formatURL(url: string) {
     return url.replace(/ /g, "-");
   }
-  const filterFunctions = (filteredStories: storyInterface[]) =>{
+
+  // 
+  // V-- 2. WRAP YOUR FUNCTION LIKE THIS --V
+  const filterFunctions = useCallback((filteredStories: storyInterface[]) =>{
     setFilteredStories(filteredStories);
-  }
+  }, [setFilteredStories]); // <-- Add the dependency array
+
   // title, src, desc, url
   const sotd = getScriptureOfTheDay({ stories: stories as storyInterface[] });
   console.log("sotd", sotd.image);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <SOTD
-        title={sotd.title}
-        src={sotd.image}
-        desc={sotd.content}
-        url={formatURL(sotd.title)}
-      />
-      {/* <FilterBy options={["All", "A", "B", "C"]} applyfilter={() => {}} /> */}
-      <Filter actions={filterFunctions} stories={filteredStories} />
+      {/* ... SOTD component ... */}
+      
+      {/* This line from my last suggestion is still correct */}
+      <Filter actions={filterFunctions} stories={storyList} />
       
       <div className="max-w-screen flex flex-wrap h-fit justify-center items-center">
         {filteredStories.map((card, index) => {
