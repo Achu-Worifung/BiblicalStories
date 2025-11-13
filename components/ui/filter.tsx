@@ -18,6 +18,7 @@ import { bibleCharacters, themes, bibleBooks  } from "@/lib/sidebarConstant";
 export function Filter({ actions, stories }: { actions: (filteredStories: storyInterface[]) => void , stories: storyInterface[]}) {
   const [open, setOpen] = useState<string>("");
   const [selected, setSelected] = useState<string[]>([]);
+  const [options, setOptions] = useState<string[]>([]);
   const [filteredOptions, setFilteredOptions] = useState<string[]>([]);
   const updateOpenState = (key: string) => {
     if (open === key) {
@@ -27,18 +28,23 @@ export function Filter({ actions, stories }: { actions: (filteredStories: storyI
     setOpen(key);
     switch (key) {
       case "Testament":
+        setOptions(["Old Testament", "New Testament"]);
         setFilteredOptions(["Old Testament", "New Testament"]);
         break;
       case "Theme":
+        setOptions(themes);
         setFilteredOptions(themes);
         break;
       case "Character":
+        setOptions(bibleCharacters);
         setFilteredOptions(bibleCharacters);
         break;
       case "Book":
+        setOptions(bibleBooks);
         setFilteredOptions(bibleBooks);
         break;
       case "Genre":
+        setOptions(["Biblical", "Non-Biblical", "Historical"]);
         setFilteredOptions([]);
         break;
       default:
@@ -61,6 +67,7 @@ export function Filter({ actions, stories }: { actions: (filteredStories: storyI
         option.toLowerCase().includes(searchTerm)
       );
       setFilteredOptions(filteredOptions);
+      // console.log("filteredOptions", filteredOptions);
     };
  
   return (
