@@ -11,7 +11,6 @@ import {
 } from "@/public/interfaces";
 import { Footer } from "@/components/layout/footer";
 import { useState, useCallback } from "react"; // <-- 1. ADD useCallback HERE
-import { FilterBy } from "@/components/ui/filter-component";
 
 
 export default function Home() {
@@ -36,7 +35,12 @@ export default function Home() {
   console.log("sotd", sotd.image);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      {/* ... SOTD component ... */}
+      <SOTD
+        title={sotd.title}
+        src={sotd.image}
+        desc={sotd.content}
+        url={formatURL(sotd.title)}
+      />
       
       {/* This line from my last suggestion is still correct */}
       <Filter actions={filterFunctions} stories={storyList} />
