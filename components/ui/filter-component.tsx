@@ -1,51 +1,16 @@
 "use client";
-import React from "react";
 import { useState } from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-  storyInterface,
-} from "@/public/interfaces";
-import { filterLinks } from "@/lib/sidebarConstant";
-import {
-  TestamentFilter,
-  ThemeFilter,
-  CharacterFilter,
-  FilterBook,
-  genreFilter,
-} from "@/components/ui/filters-components";
-import { bibleCharacters, themes, bibleBooks  } from "@/lib/sidebarConstant";
-
-export function Filter({ actions, stories }: { actions: (filteredStories: storyInterface[]) => void , stories: storyInterface[]}) {
-  const [open, setOpen] = useState<string>("");
+export function FilterBy({
+  options,
+  applyfilter,
+}: {
+  options: string[];
+  applyfilter: (selected: string[]) => void;
+}) {
   const [selected, setSelected] = useState<string[]>([]);
-  const [filteredOptions, setFilteredOptions] = useState<string[]>([]);
-  const updateOpenState = (key: string) => {
-    if (open === key) {
-      setOpen("");
-      return;
-    }
-    setOpen(key);
-    switch (key) {
-      case "Testament":
-        setFilteredOptions(["Old Testament", "New Testament"]);
-        break;
-      case "Theme":
-        setFilteredOptions(themes);
-        break;
-      case "Character":
-        setFilteredOptions(bibleCharacters);
-        break;
-      case "Book":
-        setFilteredOptions(bibleBooks);
-        break;
-      case "Genre":
-        setFilteredOptions([]);
-        break;
-      default:
-        break;
-    }
-  };
-    const toggleOption = (option: string) => {
+  const [filteredOptions, setFilteredOptions] = useState<string[]>(options);
+
+  const toggleOption = (option: string) => {
     setSelected((prev) => {
       const exists = prev.includes(option);
       const next = exists
@@ -62,11 +27,10 @@ export function Filter({ actions, stories }: { actions: (filteredStories: storyI
       );
       setFilteredOptions(filteredOptions);
     };
- 
+
   return (
-    <div className="flex items-center justify-center w-full flex-col py-10">
-      <FloatingDock items={filterLinks} changeOpenState={updateOpenState} />
-      {filteredOptions && (
+    <div className="flex flex-col w-44 text-sm relative">
+      {options && (
         <ul className="w-full  rounded-md mt-1 py-2  bg-gray-50 dark:bg-neutral-900 hover:shadow-lg ">
           <div className="flex items-center border pl-4 gap-2 border-gray-500/30 h-[46px] rounded-full overflow-hidden max-w-md w-full mb-1.5">
             <svg
@@ -105,11 +69,6 @@ export function Filter({ actions, stories }: { actions: (filteredStories: storyI
           ))}
         </ul>
       )}
-      {/* {open === "Testament" && <TestamentFilter filter= {actions.testamentFilter}/>}
-      {open === "Theme" && <ThemeFilter filter={actions.themeFilter} /> }
-      {open === "Character" && <CharacterFilter filter ={actions.characterFilter}/>}
-      {open === "Book" && <FilterBook filter ={actions.bookFilter}/>}
-      {open ==="Genres" && <FilterGenre filter={actions.genreFilter}/>} */}
     </div>
   );
 }

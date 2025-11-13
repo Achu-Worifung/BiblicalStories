@@ -101,10 +101,12 @@ const FloatingDockDesktop = ({
   items,
   className,
   changeOpenState,
+  children,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
   changeOpenState?: (key: string) => void;
+  children?: React.ReactNode;
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
@@ -119,6 +121,7 @@ const FloatingDockDesktop = ({
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} changeOpenState={changeOpenState}/>
       ))}
+      {children}
     </motion.div>
   );
 };

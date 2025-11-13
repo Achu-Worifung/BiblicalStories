@@ -18,11 +18,3 @@ export interface storyInterface {
     }
 }
 
-export interface actions 
-{
-    testamentFilter: (testament: string[]) => void;
-    themeFilter: (theme: string[]) => void;
-    characterFilter: (character: string[]) => void;
-    bookFilter: (book: string[]) => void;
-    genreFilter: (genre: string[]) => void;
-}
