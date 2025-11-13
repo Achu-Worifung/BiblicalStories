@@ -5,10 +5,14 @@ import { storyInterface } from "@/public/interfaces";
  * (e.g., story.metadata.testament, story.metadata.author)
  * This is now case-insensitive.
  */
+type Metadata = storyInterface["metadata"];
+type StringMetadataKey = { [K in keyof Metadata]: Metadata[K] extends string ? K : never }[keyof Metadata];
+type ArrayMetadataKey = { [K in keyof Metadata]: Metadata[K] extends string[] ? K : never }[keyof Metadata];
+
 const metadataFilter = (
   selectedItems: string[],
   stories: storyInterface[],
-  metadataKey: keyof storyInterface["metadata"]
+  metadataKey: StringMetadataKey
 ) => {
   // If no items are selected, return all stories
   if (selectedItems.length === 0) {
@@ -20,7 +24,7 @@ const metadataFilter = (
 
   return stories.filter((story: storyInterface) => {
     // Ensure metadata and key exist, provide a fallback
-    const storyValue = (story.metadata?.[metadataKey] as string) || "";
+    const storyValue = (story.metadata?.[metadataKey] as unknown as string) || "";
 
     // Compare lowercase values
     return lowerSelectedItems.includes(storyValue.toLowerCase());
@@ -35,7 +39,7 @@ const metadataFilter = (
 const metadataArrayFilter = (
   selectedItems: string[],
   stories: storyInterface[],
-  metadataKey: keyof storyInterface["metadata"]
+  metadataKey: ArrayMetadataKey
 ) => {
   if (selectedItems.length === 0) {
     return stories;
@@ -44,7 +48,7 @@ const metadataArrayFilter = (
   const lowerSelectedItems = selectedItems.map((item) => item.toLowerCase());
 
   return stories.filter((story: storyInterface) => {
-    const storyValues = (story.metadata?.[metadataKey] as string[]) || [];
+    const storyValues = (story.metadata?.[metadataKey] as unknown as string[]) || [];
 
     const lowerStoryValues = storyValues.map((val) => val.toLowerCase());
 
@@ -61,7 +65,7 @@ export const testamentFilter = (
 };
 
 export const themeFilter = (themes: string[], stories: storyInterface[]) => {
-  return metadataArrayFilter(themes, stories, "categories");
+  return metadataArrayFilter(themes, stories, "theme");
 };
 
 export const characterFilter = (
@@ -69,15 +73,15 @@ export const characterFilter = (
   stories: storyInterface[]
 ) => {
 
-  return metadataFilter(character, stories, "author");
+  return metadataArrayFilter(character, stories, "characters");
 };
 
 export const bookFilter = (book: string[], stories: storyInterface[]) => {
 
-  return metadataArrayFilter(book, stories, "categories");
+  return metadataFilter(book, stories, "book");
 };
 
 export const genreFilter = (genre: string[], stories: storyInterface[]) => {
   
-  return metadataArrayFilter(genre, stories, "categories");
+  return metadataArrayFilter(genre, stories, "genre");
 };
