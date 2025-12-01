@@ -7,7 +7,7 @@ import {
 } from "@tabler/icons-react";
 export function Footer() {
   return (
-    <footer className="py-20 max-w-2xl flex flex-col items-center justify-center min-w-screen px-8 bg-neutral-800/20">
+    <footer className="py-20 max-w-2xl flex flex-col items-center justify-center min-w-full px-8 bg-neutral-800/20">
       <span className="flex items-center  gap-2 cursor-pointer ">
         <img
           src="/favicon.ico"

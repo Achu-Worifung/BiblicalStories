@@ -7,7 +7,7 @@ export default function Page()
 {
 
     return (
-        <div className="gap-4 min-w-screen m-0 p-0 flex flex-col items-center justify-center ">
+        <div className="gap-4 min-w-full m-0 p-0 flex flex-col items-center justify-center ">
             <Suggestion />
             <Footer />
         </div>

@@ -132,7 +132,7 @@ export function Filter({
               damping: 30,
               stiffness: 300
             }}
-            className="fixed top-0 right-0 w-full max-w-[380px] h-screen z-50"
+            className="fixed top-0 right-0 w-full max-w-[380px] h-full z-50"
           >
             <div className="relative h-full bg-gradient-to-br from-gray-900/95 via-gray-900/98 to-black/95 backdrop-blur-xl border-l border-white/10 shadow-2xl">
               {/* Gradient accent */}

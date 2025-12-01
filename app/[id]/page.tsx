@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   const passage = await scrapeStory(viewingStory.reference, "KJV");
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="flex flex-col items-center justify-center min-h-full p-4 box-border">
       <div>
         <Read
           title={viewingStory.title}

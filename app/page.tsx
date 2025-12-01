@@ -34,7 +34,7 @@ export default function Home() {
   const sotd = getScriptureOfTheDay({ stories: stories as storyInterface[] });
   console.log("sotd", sotd.image);
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="flex flex-col items-center justify-center min-h-full p-4 box-border">
       <SOTD
         title={sotd.title}
         src={sotd.image}
@@ -45,7 +45,7 @@ export default function Home() {
       {/* This line from my last suggestion is still correct */}
       <Filter actions={filterFunctions} stories={storyList} />
       
-      <div className="max-w-screen flex flex-wrap h-fit justify-center items-center">
+      <div className="max-w-full flex flex-wrap h-fit justify-center items-center">
         {filteredStories.map((card, index) => {
           return (
             <Card

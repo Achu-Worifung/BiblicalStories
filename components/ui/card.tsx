@@ -1,5 +1,6 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
+import Image from "next/image";
 
 export function Card({
   title,
@@ -16,12 +17,15 @@ export function Card({
         <CardItem
           translateZ="100"
           as="div"
-          className="relative glare-card overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out m-24 max-w-[294px] md:max-w-[290px] cursor-pointer hover:scale-[1.02] rounded-lg shadow "
+          className="relative glare-card overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out my-5 max-w-[294px] md:max-w-[290px] cursor-pointer hover:scale-[1.02] rounded-lg shadow "
           onClick={() => {
-            window.open(url, "_blank");
+            window.open(url);
           }}
         >
-          <img
+          {/* if hover is glitching change this to img  */}
+          <Image
+            width={290}
+            height={384}
             alt={title}
             src={src}
             className="object-cover absolute inset-0 h-full w-full rounded-sm"

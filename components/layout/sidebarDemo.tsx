@@ -15,7 +15,7 @@ export function SidebarDemo() {
     <div
       className={cn(
         "mx-auto flex w-full max-w-7xl flex-1 flex-col overflow-hidden rounded-md border border-neutral-200 bg-gray-100 md:flex-row dark:border-neutral-700 dark:bg-neutral-800",
-        "max-h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
+        "max-h-full" // for your use case, use `h-full` instead of `h-[60vh]`
       )}
     >
       <Sidebar open={open} animate={false} setOpen={setOpen}>
