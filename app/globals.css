@@ -7,7 +7,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  overflow-x: hidden;
  
 }
 
@@ -40,6 +40,7 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 2060px ;
+  width: 100%; 
   align-self: center;
 }
 .glare-card::before {
