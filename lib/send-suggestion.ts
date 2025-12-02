@@ -4,7 +4,9 @@
 import nodemailer from "nodemailer";
 
 export async function SendSuggestion({ category, reference }: { category: string; reference: string }) {
-    const email = process.env.GOOGLE_EMAIL;
+    try 
+    {
+        const email = process.env.GOOGLE_EMAIL;
     const password = process.env.GOOGLE_PASSWORD;
 
     console.log("Email:", email);
@@ -24,6 +26,11 @@ export async function SendSuggestion({ category, reference }: { category: string
         subject: `New Suggestion`,
         text: `Reference: ${reference} Category: ${category}`,
     });
+    } catch (error) 
+    {
+       return { status: "error", error: error };
+    }
+    
 
     return { status: "success" };
 }
