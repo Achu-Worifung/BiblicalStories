@@ -45,7 +45,7 @@ export default function Home() {
 
         <Filter actions={filterFunctions} stories={storyList} />
 
-        <div className="max-w-full flex flex-wrap h-fit justify-center items-center w-full">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 w-full max-w-7xl mt-10 xl:grid-cols-4 2xl:grid-cols-5 2xl:gap-x-50">
           {filteredStories.length === 0 ? (
             <motion.div
               key="no-results"
