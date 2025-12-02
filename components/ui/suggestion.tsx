@@ -2,13 +2,7 @@
 import React, { useState } from "react";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 import { SendSuggestion } from "@/lib/send-suggestion";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalTrigger,
-} from "../ui/animated-modal";
+
 export function Suggestion() {
   const [ref, setRef] = useState("");
   const [cat, setCat] = useState("");
@@ -125,7 +119,7 @@ export function Suggestion() {
         </div>
       )}
 
-      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+      <div className=" p-4 max-w-7xl  relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-4xl md:text-7xl/16 font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
           Make A suggestion <br /> Improve the experiecne
         </h1>
@@ -135,14 +129,14 @@ export function Suggestion() {
           on adding it to the library as soon as possible.
         </p>
       </div>
-      <div className=" flex flex-col justify-center gap-5 ">
+      <div className=" flex flex-col justify-center gap-5 px-4 box-border mt-10 max-w-2xl w-full mx-auto">
         <p className="text-2xl font-semibold text-left">Reference:</p>
         <PlaceholdersAndVanishInput
           placeholders={Reference}
           onChange={refChange}
           onSubmit={onSubmit}
         />
-        <p className="text-2xl font-semibold text-left  w-[512px]">Category:</p>
+        <p className="text-2xl font-semibold text-left  ">Category:</p>
         <PlaceholdersAndVanishInput
           placeholders={category}
           onChange={catChange}
