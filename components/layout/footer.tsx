@@ -1,24 +1,26 @@
+'use client';
 import {
-  IconBrandMeta,
-  IconBrandX,
   IconBrandGithub,
-  IconBrandInstagram,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
+import Image from "next/image";
 
 export function Footer() {
+  const navigate = (url: string) => {
+    window.open(url, "_blank");
+  }
   return (
-    <footer className="py-10 max-w-full flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
-      <div className="flex items-center gap-3 cursor-pointer mb-5">
-        <img
-          src="/favicon.ico"
-          alt="logo"
-          width={50}
-          height={50}
-          className="p-2 bg-white rounded-full shadow-lg"
-        />
-        <p className="text-3xl font-bold">BStories</p>
-      </div>
+    <footer className="py-10 min-w-full flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
+      <span className="flex justify-center items-center gap-2">
+              <Image
+                src="/favicon.ico"
+                alt="logo"
+                width={40}
+                height={40}
+                className="p-2 bg-white rounded-md"
+              />
+              <p className="text-2xl font-semibold">BStories</p>
+            </span>
 
       <nav className="flex gap-8 py-4 w-full items-center justify-center text-lg">
         <a href="#" className="hover:underline hover:text-gray-300">
@@ -35,11 +37,10 @@ export function Footer() {
       <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-4xl py-4 border-t border-gray-700 mt-5">
         <p className="text-sm">© 2023 BStories. All rights reserved.</p>
         <div className="flex gap-4 mt-4 sm:mt-0">
-          <IconBrandX className="hover:scale-110 cursor-pointer transition-transform duration-200" />
-          <IconBrandMeta className="hover:scale-110 cursor-pointer transition-transform duration-200" />
-          <IconBrandGithub className="hover:scale-110 cursor-pointer transition-transform duration-200" />
-          <IconBrandInstagram className="hover:scale-110 cursor-pointer transition-transform duration-200" />
-          <IconBrandLinkedin className="hover:scale-110 cursor-pointer transition-transform duration-200" />
+
+          <IconBrandGithub onClick={() => navigate("https://github.com/Achu-Worifung")} className="hover:scale-110 cursor-pointer transition-transform duration-200" />
+
+          <IconBrandLinkedin onClick={() => navigate("https://www.linkedin.com/in/worifung-achu-bab3b423a/")} className="hover:scale-110 cursor-pointer transition-transform duration-200" />
         </div>
       </div>
     </footer>

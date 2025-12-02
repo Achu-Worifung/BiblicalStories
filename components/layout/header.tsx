@@ -23,7 +23,7 @@ export function Header() {
         <p className="text-2xl font-semibold">BStories</p>
       </span>
       <span className="flex justify-center items-center gap-24 font-semibold text-lg [&>a]:px-4 [&>a]:py-2 [&>a]:cursor-pointer [&>a]:hover:border-b-4 [&>a]:hover:border-neutral-600  [&>a]:box-border" >
-        <Link href="/" className={((pathname === "/")|| (pathname != '/suggestions') || (pathname != "/about")) ? "border-b-4 border-neutral-600" : ""}>Home</Link>
+        <Link href="/" className={pathname === "/" ? "border-b-4 border-neutral-600" : ""}>Home</Link>
         <Link href="/suggestions" className={pathname === "/suggestions" ? "border-b-4 border-neutral-600" : ""}>Suggestions</Link>
         <Link href="/about" className={pathname === "/about" ? "border-b-4 border-neutral-600" : ""}>About</Link>
       </span>

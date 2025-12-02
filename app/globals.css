@@ -7,7 +7,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x:hidden;
  
 }
 
@@ -87,4 +87,19 @@ body {
 /* Style the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.recommendation-container 
+{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  background-color: white;
+  width: 100%;
+  position: relative;
+  max-width: 2060px;
+  padding:0;
+  
+
 }

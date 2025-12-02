@@ -12,8 +12,8 @@ export function Recommendations({ stories }: { stories: storyInterface[] }) {
       <p className="text-2xl font-bold text-center mt-10">
         You might also like
       </p>
-      <div className="max-w-[1020px] flex flex-col items-center justify-center min-w-screen px-5 mx-auto ">
-        <div className="flex flex-row items-center justify-between w-full min-h-[300px] relative">
+      <div className="max-w-[102px] flex flex-col items-center justify-center min-w-screen px-5 mx-auto relative">
+        <div className="flex flex-row items-center justify-between w-full min-h-[300px]">
           <button
             className=" text-white h-full min-h-[384px] box-border p-3 flex items-center justify-center cursor-pointer rounded-s-sm transparent backdrop-blur-md absolute left-0 top-0 z-10"
             onClick={() => {
