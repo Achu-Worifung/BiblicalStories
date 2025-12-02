@@ -28,12 +28,14 @@ export default function Home() {
       setFilteredStories(filteredStories);
     },
     [setFilteredStories]
-  ); // <-- Add the dependency array
+  );
 
   // title, src, desc, url
   const sotd = getScriptureOfTheDay({ stories: stories as storyInterface[] });
   console.log("sotd", sotd.image);
   return (
+    <>
+
     <div className="flex flex-col items-center justify-center min-h-full p-4 box-border">
       <SOTD
         title={sotd.title}
@@ -45,7 +47,7 @@ export default function Home() {
       {/* This line from my last suggestion is still correct */}
       <Filter actions={filterFunctions} stories={storyList} />
 
-      <div className="max-w-full flex flex-wrap h-fit justify-center items-center">
+      <div className="max-w-full flex flex-wrap h-fit justify-center items-center w-full">
         {filteredStories.length === 0 ? (
           <motion.div
             key="no-results"
@@ -53,7 +55,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col items-center justify-center py-12 text-center"
+            className="flex flex-col items-center justify-center py-12 text-center w-full"
           >
             <div className="w-16 h-16 mb-4 rounded-full bg-white/5 flex items-center justify-center grow">
               <svg
@@ -87,7 +89,8 @@ export default function Home() {
           })
         )}
       </div>
-      <Footer />
     </div>
+      <Footer />
+      </>
   );
 }
