@@ -6,7 +6,7 @@ export function SOTD({ title, src, desc, url }: { title: string, src: string, de
 
   return (
     <CardContainer className="inter-var w-full">
-      <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 md:p-6 border flex flex-col md:flex-row gap-4 md:gap-6">
+      <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-4 md:p-6 border flex flex-col md:flex-row gap-4 md:gap-6 w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
     
         {/* Image Section */}
         <CardItem translateZ="100" className="w-full md:w-2/3">
