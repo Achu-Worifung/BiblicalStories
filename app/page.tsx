@@ -35,62 +35,60 @@ export default function Home() {
   console.log("sotd", sotd.image);
   return (
     <>
+      <div className="flex flex-col items-center justify-center min-h-full p-4 box-border">
+        <SOTD
+          title={sotd.title}
+          src={sotd.image}
+          desc={sotd.content}
+          url={formatURL(sotd.title)}
+        />
 
-    <div className="flex flex-col items-center justify-center min-h-full p-4 box-border">
-      <SOTD
-        title={sotd.title}
-        src={sotd.image}
-        desc={sotd.content}
-        url={formatURL(sotd.title)}
-      />
+        <Filter actions={filterFunctions} stories={storyList} />
 
-      {/* This line from my last suggestion is still correct */}
-      <Filter actions={filterFunctions} stories={storyList} />
-
-      <div className="max-w-full flex flex-wrap h-fit justify-center items-center w-full">
-        {filteredStories.length === 0 ? (
-          <motion.div
-            key="no-results"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.3 }}
-            className="flex flex-col items-center justify-center py-12 text-center w-full"
-          >
-            <div className="w-16 h-16 mb-4 rounded-full bg-white/5 flex items-center justify-center grow">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="text-gray-500"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </div>
-            <p className="text-gray-400 text-sm">No results found</p>
-            <p className="text-gray-500 text-xs mt-1">
-              Try a different search term
-            </p>
-          </motion.div>
-        ) : (
-          filteredStories.map((card, index) => {
-            return (
-              <Card
-                key={index}
-                title={card.title}
-                url={formatURL(card.title)}
-                src={card.image}
-              />
-            );
-          })
-        )}
+        <div className="max-w-full flex flex-wrap h-fit justify-center items-center w-full">
+          {filteredStories.length === 0 ? (
+            <motion.div
+              key="no-results"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="flex flex-col items-center justify-center py-12 text-center w-full"
+            >
+              <div className="w-16 h-16 mb-4 rounded-full bg-white/5 flex items-center justify-center grow">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="text-gray-500"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </div>
+              <p className="text-gray-400 text-sm">No results found</p>
+              <p className="text-gray-500 text-xs mt-1">
+                Try a different search term
+              </p>
+            </motion.div>
+          ) : (
+            filteredStories.map((card, index) => {
+              return (
+                <Card
+                  key={index}
+                  title={card.title}
+                  url={formatURL(card.title)}
+                  src={card.image}
+                />
+              );
+            })
+          )}
+        </div>
       </div>
-    </div>
       <Footer />
-      </>
+    </>
   );
 }
