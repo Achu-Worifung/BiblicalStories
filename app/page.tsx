@@ -1,4 +1,3 @@
-//
 "use client";
 
 import { SOTD } from "@/components/ui/story-of-the-day";
@@ -12,7 +11,7 @@ import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const [stories, setStories] = useState<storyInterface[]>(storyList);
+ const stories= storyList as storyInterface[];
 
   const [filteredStories, setFilteredStories] =
     useState<storyInterface[]>(stories);

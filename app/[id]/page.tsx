@@ -11,11 +11,11 @@ export default async function Page({ params }: { params: { id: string } }) {
   const { id } = await params;
   const title = id.replace(/-/g, " "); //removing the url formatting
 
-  const viewingStory: storyInterface = stories.find(
+  const viewingStory: storyInterface | undefined = stories.find(
     (story: storyInterface) => story.title == title
   );
   console.log("viewingStory", viewingStory);
-  if (!viewingStory) return notFound(); //how to do not found page
+  if (!viewingStory) return notFound(); 
 
   const passage = await scrapeStory(viewingStory.reference, "KJV");
 

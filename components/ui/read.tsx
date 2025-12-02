@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 
-import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "./tracing-beam";
 
 export function Read({
@@ -29,9 +28,9 @@ export function Read({
         <Image
           src={image}
           alt="story thumbnail"
-          height="1000"
-          width="1000"
-          className="rounded-lg mb-10 object-cover"
+          height={450}
+          width={800} 
+          className="rounded-lg mb-10 object-scale-down max-h-175"
         />
 
         <div

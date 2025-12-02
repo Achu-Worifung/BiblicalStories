@@ -1,12 +1,13 @@
 "use client";
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { IconMathGreater, IconMathLower } from "@tabler/icons-react";
 import { storyInterface } from "@/public/interfaces";
 
 export function Recommendations({ stories }: { stories: storyInterface[] }) {
   console.log("stories", stories);
-
+  function formatURL(url: string) {
+    return url.replace(/ /g, "-");
+  }
   return (
     <>
       <p className="text-2xl font-bold text-center mt-10">
@@ -30,7 +31,7 @@ export function Recommendations({ stories }: { stories: storyInterface[] }) {
           </button>
           <div className="flex flex-row snap-x snap-mandatory overflow-scroll w-full h-full items-start justify-start scroll-m-5 pr-5 gap-2 hidescrollbar">
             {stories.map((item, index) => (
-              <Card key={index} title={item.title} src={item.image} />
+              <Card key={index} title={item.title} src={item.image} url={formatURL(item.title)}/>
             ))}
           </div>
           <button

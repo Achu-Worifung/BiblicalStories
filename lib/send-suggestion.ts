@@ -9,8 +9,6 @@ export async function SendSuggestion({ category, reference }: { category: string
         const email = process.env.GOOGLE_EMAIL;
     const password = process.env.GOOGLE_PASSWORD;
 
-    console.log("Email:", email);
-    console.log("Password:", password);
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
