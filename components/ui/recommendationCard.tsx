@@ -28,7 +28,7 @@ export function Recommendations({ stories }: { stories: storyInterface[] }) {
           >
             <IconMathLower />
           </button>
-          <div className="flex flex-row snap-x snap-mandatory overflow-hidden w-full h-full items-start justify-start scroll-m-5 pr-5">
+          <div className="flex flex-row snap-x snap-mandatory overflow-scroll w-full h-full items-start justify-start scroll-m-5 pr-5 gap-2 hidescrollbar">
             {stories.map((item, index) => (
               <Card key={index} title={item.title} src={item.image} />
             ))}

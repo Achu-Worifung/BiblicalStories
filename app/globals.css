@@ -103,3 +103,7 @@ body {
   
 
 }
+
+.hidescrollbar::-webkit-scrollbar {
+  display: none;
+}
