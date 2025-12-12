@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.34.0",
+    "@types/nodemailer": "^7.0.4",
     "aceternity-ui": "^0.2.2",
     "cheerio": "^1.0.0",
     "clsx": "^2.1.1",
