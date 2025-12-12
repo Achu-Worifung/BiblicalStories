@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Filter } from "@/components/ui/filter";
 import { storyInterface } from "@/public/interfaces";
 import { Footer } from "@/components/layout/footer";
-import { useState, useCallback, Suspense } from "react";
+import { useState, useCallback, Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import Loading from "./loading";
 
@@ -28,19 +28,26 @@ export default function Home() {
     [setFilteredStories]
   );
 
-  // title, src, desc, url
-  const sotd = getScriptureOfTheDay({ stories: stories as storyInterface[] });
-  console.log("sotd", sotd.image);
+  // Avoid SSR/client mismatch: compute SOTD on client only
+  const [sotd, setSotd] = useState<storyInterface | null>(null);
+  useEffect(() => {
+    const selected = getScriptureOfTheDay({ stories: stories as storyInterface[] });
+    setSotd(selected);
+  }, [stories]);
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-full p-4 box-border">
         <Suspense fallback={<Loading />}>
-          <SOTD
-            title={sotd.title}
-            src={sotd.image}
-            desc={sotd.content}
-            url={formatURL(sotd.title)}
-          />
+          {sotd ? (
+            <SOTD
+              title={sotd.title}
+              src={sotd.image}
+              desc={sotd.content}
+              url={formatURL(sotd.title)}
+            />
+          ) : (
+            <Loading />
+          )}
         </Suspense>
 
         <Filter actions={filterFunctions} stories={storyList} />
