@@ -15,6 +15,10 @@ export function getScriptureOfTheDay({stories}:{stories:storyInterface[]}) {
 
 // Helper functions to manage cookies
   function getCookie(name: string) {
+    // Guard for SSR: `document` is not available on the server
+    if (typeof document === "undefined") {
+      return null;
+    }
     const nameEQ = name + "=";
     const cookies = document.cookie.split(";");
     for (let cookie of cookies) {
@@ -34,6 +38,10 @@ export function getScriptureOfTheDay({stories}:{stories:storyInterface[]}) {
 
   // Function to set a cookie with the given name and value
     function setCookie({ name, value }: { name: string; value: storyInterface }) {
+    // Guard for SSR: `document` is not available on the server
+    if (typeof document === "undefined") {
+      return;
+    }
     const now = new Date();
     now.setHours(23, 59, 59, 999); // Set to today's midnight
   

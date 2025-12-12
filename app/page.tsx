@@ -20,8 +20,6 @@ export default function Home() {
     return url.replace(/ /g, "-");
   }
 
-  //
-  // V-- 2. WRAP YOUR FUNCTION LIKE THIS --V
   const filterFunctions = useCallback(
     (filteredStories: storyInterface[]) => {
       setFilteredStories(filteredStories);

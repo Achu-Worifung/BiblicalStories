@@ -4,7 +4,7 @@ export const stories = [
     title: "Creation of the World",
     reference: "Genesis 1:1-21; Genesis 2:1-4",
     content: "",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible%20project%20images/creation%20of%20the%20earth.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/creation.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -39,7 +39,7 @@ export const stories = [
     title: "Noah's Ark",
     reference: "Genesis 6:9-9:17",
     content: "God instructed Noah to build an ark...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/the fall of man.jpeg",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/noah.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -73,7 +73,7 @@ export const stories = [
     title: "Sodom and Gomorrah",
     reference: "Genesis 18:16-33; Genesis 19:1-38",
     content: "In those days, Caesar Augustus issued a decree...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/sodm and gamorah.jpeg",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/sodome and gamorrah.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -110,7 +110,7 @@ export const stories = [
     title: "The Good Samaritan",
     reference: "Luke 10:25-37",
     content: "A man was going down from Jerusalem to Jericho...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/the good samaritan.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -127,7 +127,7 @@ export const stories = [
     title: "The Resurrection",
     reference: "Matthew 28:1-15",
     content: "The Philistine giant Goliath challenged the Israelites...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/resurection.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -144,7 +144,7 @@ export const stories = [
     title: "Moses and the Burning Bush",
     reference: "Exodus 3:1-22",
     content: "Moses was tending the flock...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/exodus.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -161,7 +161,7 @@ export const stories = [
     title: "The Prodigal Son",
     reference: "Luke 15:11-32",
     content: "A man had two sons...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/prodigal son.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -229,7 +229,7 @@ export const stories = [
     title: "Jesus Feeds 5,000",
     reference: "Matthew 14:13-21",
     content: "Jesus fed a large crowd...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/feeding5000.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -280,7 +280,7 @@ export const stories = [
     title: "The Fiery Furnace",
     reference: "Daniel 3:1-25",
     content: "Daniel, a faithful servant...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/furnace.jpeg",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/the fiery furnace.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -297,7 +297,7 @@ export const stories = [
     title: "The Rich Man and Lazarus",
     reference: "Luke 16:19-31",
     content: "Daniel, a faithful servant...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/rich man and the poor man.jpeg",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/rich man and lazarus.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -348,7 +348,7 @@ export const stories = [
     title: "The Transfiguration",
     reference: "Matthew 17:1-13",
     content: "Jesus took Peter, James...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/no image found.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -365,7 +365,7 @@ export const stories = [
     title: "Raising Lazarus from the Dead",
     reference: "John 11:1-45",
     content: "Jesus raised Lazarus...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/lazarus.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -382,7 +382,7 @@ export const stories = [
     title: "The Healing of the Blind Man",
     reference: "John 9:1-41",
     content: "Jesus healed a man born blind...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/no image found.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -399,7 +399,7 @@ export const stories = [
     title: "The Last Supper",
     reference: "Matthew 26:17-30",
     content: "Jesus shared a Passover meal...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/the last supper.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -416,7 +416,7 @@ export const stories = [
     title: "The Crucifixion",
     reference: "Luke 23:26-49",
     content: "Jesus was crucified...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/no image found.png",
     fit: "cover",
     position: "center",
     metadata: {

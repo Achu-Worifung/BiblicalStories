@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
                 port: '',
                 pathname: '/biblicalstoriesimg/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'bstoriesstorage.blob.core.windows.net',
+                port: '',
+                pathname: '/storiespictures/**',
+            },
            
         ],
     }
