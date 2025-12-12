@@ -14,6 +14,7 @@ export function SOTD({ title, src, desc, url }: { title: string, src: string, de
             src={src}
             height="1000"
             width="1000"
+            priority
             className="h-48 md:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
