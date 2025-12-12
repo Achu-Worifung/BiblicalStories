@@ -13,7 +13,7 @@ export async function scrapeStory(ref :string, translation: string = "KJV")
         const res = await axios.get(url);
         const $ = cheerio.load(res.data);
         let story = '';
-        $('p:has(span)').each((index: number, element: cheerio.Element) => 
+        $('p:has(span)').each((index: number, element) => 
         {
              story += '<p className = "text-start" >'  + $(element).text() + '</p><br/>';
 
