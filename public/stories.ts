@@ -144,7 +144,7 @@ export const stories = [
     title: "Moses and the Burning Bush",
     reference: "Exodus 3:1-22",
     content: "Moses was tending the flock...",
-    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/exodus.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/moses and the burning bush.png",
     fit: "cover",
     position: "center",
     metadata: {
@@ -178,7 +178,7 @@ export const stories = [
     title: "The Exodus",
     reference: "Exodus 12:29-51",
     content: "God brought the Israelites out of Egypt...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/moses splitting the sea.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/exodus.png",
     fit: "cover",
     position: "100% 00%",
     metadata: {
