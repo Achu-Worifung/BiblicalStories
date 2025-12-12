@@ -6,16 +6,16 @@ import { scrapeStory } from "@/lib/scrape-story";
 import { Recommendations } from "@/components/ui/recommendationCard";
 import { Footer } from "@/components/layout/footer";
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   console.log("params", params);
   const { id } = await params;
-  const title = id.replace(/-/g, " "); //removing the url formatting
+  const title = id.replace(/-/g, " ");
 
   const viewingStory: storyInterface | undefined = stories.find(
     (story: storyInterface) => story.title == title
   );
   console.log("viewingStory", viewingStory);
-  if (!viewingStory) return notFound(); 
+  if (!viewingStory) return notFound();
 
   const passage = await scrapeStory(viewingStory.reference, "KJV");
 
