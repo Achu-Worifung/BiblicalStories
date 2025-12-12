@@ -56,7 +56,7 @@ export const stories = [
     title: "The Ten Commandments",
     reference: "Exodus 20:1-17",
     content: "And God spoke all these words...",
-    image: "https://amcwebsitestorage.blob.core.windows.net/biblicalstoriesimg/bible project images/no image found.png",
+    image: "https://bstoriesstorage.blob.core.windows.net/storiespictures/no image found.png",
     fit: "cover",
     position: "center",
     metadata: {
