@@ -17,7 +17,7 @@ useEffect(() => {
    console.log("Checked Testaments:", checkedTestaments);
     // Call the filter function with the selected testaments
     filter(checkedTestaments);
-}, [checkedTestaments]);
+}, [checkedTestaments, filter]);
   return (
     <div
       className="py-4 flex flex-col items-center justify-center "
@@ -70,7 +70,7 @@ export function ThemeFilter({filter}: {filter: (theme: string[]) => void}) {
     console.log("Checked Themes:", checkedThemes);
     // Call the filter function with the selected themes
     filter(checkedThemes);
-  }, [checkedThemes]);
+  }, [checkedThemes, filter]);
   return (
     <div className="flex flex-col items-center justify-center py-4" id="Theme">
       <p className="font-bold text-2xl">Filter by Theme</p>
@@ -106,7 +106,7 @@ export function CharacterFilter({filter}: {filter: (character: string[]) => void
     console.log("Checked Characters:", checkedCharacters);
     // Call the filter function with the selected characters
     filter(checkedCharacters);
-  }, [checkedCharacters]);
+  }, [checkedCharacters, filter]);
   const filterCharacter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredCharacters = bibleCharacters.filter((character) =>
@@ -135,7 +135,7 @@ export function CharacterFilter({filter}: {filter: (character: string[]) => void
               type="checkbox"
               id={character}
               value={character}
-              checked={!!checkedCharacters[character]}
+              checked={checkedCharacters.includes(character)}
               onChange={() => handleCheckboxChange(character)}
             />
             <label htmlFor={character} className="cursor-pointer capitalize">
@@ -161,11 +161,11 @@ export function FilterBook({filter}: {filter: (book: string[]) => void}) {
   useEffect(() => {
     console.log("Checked Books:", checkedBooks);
     filter(checkedBooks);
-  }, [checkedBooks]);
+  }, [checkedBooks, filter]);
 
   const filterBooks = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
-    const filteredCharacters = bibleBooks.filter((book) =>
+    const filteredCharacters: string[] = bibleBooks.filter((book: string) =>
       book.toLowerCase().includes(searchTerm)
     );
     setFiltered(filteredCharacters);
@@ -190,7 +190,7 @@ export function FilterBook({filter}: {filter: (book: string[]) => void}) {
             <input
               type="checkbox"
               id={book}
-              checked={!!checkedBooks[book]}
+              checked={checkedBooks.includes(book)}
               onChange={() => handleCheckboxChange(book)}
             />
             <label htmlFor={book} className="cursor-pointer capitalize">
@@ -229,7 +229,7 @@ export function FilterGenre({filter}: {filter: (genre: string[]) => void}) {
               id={genre}
               name={genre}
               value={genre}
-              checked={!!checkedGenres[genre]}
+              checked={checkedGenres.includes(genre)}
               onChange={() => handleCheckboxChange(genre)}
             />
             <label htmlFor={genre} className="text-lg">
